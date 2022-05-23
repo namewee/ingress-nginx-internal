@@ -18,12 +18,12 @@ controller:
   image:
     ## Keep false as default for now!
     chroot: false
-    registry: docker.io
-    image: acvchina/ingress-nginx-controller
+    # registry: docker.io
+    # image: acvchina/ingress-nginx-controller
     ## for backwards compatibility consider setting the full image url via the repository value below
     ## use *either* current default registry/image or repository format or installing chart by providing the values.yaml will fail
     ## repository:
-    tag: "v1.2.0"
+    # tag: "v1.2.0"
     # digest: sha256:d8196e3bc1e72547c5dec66d6556c0ff92a23f6d0919b206be170bc90d5f9185
     # digestChroot: sha256:fb17f1700b77d4fcc52ca6f83ffc2821861ae887dbb87149cf5cbc52bea425e5
     pullPolicy: IfNotPresent
@@ -630,14 +630,14 @@ controller:
     patch:
       enabled: true
       image:
-        registry: k8s.gcr.io
-        image: ingress-nginx/kube-webhook-certgen
+        # registry: k8s.gcr.io
+        # image: ingress-nginx/kube-webhook-certgen
         ## for backwards compatibility consider setting the full image url via the repository value below
         ## use *either* current default registry/image or repository format or installing chart by providing the values.yaml will fail
         ## repository:
-        tag: v1.1.1
-        digest: sha256:64d8c73dca984af206adf9d6d7e46aa550362b1d7a01f3a0a91b20cc67868660
-        pullPolicy: IfNotPresent
+        # tag: v1.1.1
+        # digest: sha256:64d8c73dca984af206adf9d6d7e46aa550362b1d7a01f3a0a91b20cc67868660
+        # pullPolicy: IfNotPresent
       # -- Provide a priority class name to the webhook patching job
       ##
       priorityClassName: ""
@@ -757,13 +757,13 @@ defaultBackend:
 
   name: defaultbackend
   image:
-    registry: k8s.gcr.io
-    image: defaultbackend-amd64
+    # registry: k8s.gcr.io
+    # image: defaultbackend-amd64
     ## for backwards compatibility consider setting the full image url via the repository value below
     ## use *either* current default registry/image or repository format or installing chart by providing the values.yaml will fail
     ## repository:
-    tag: "1.5"
-    pullPolicy: IfNotPresent
+    # tag: "1.5"
+    # pullPolicy: IfNotPresent
     # nobody user -> uid 65534
     runAsUser: 65534
     runAsNonRoot: true
